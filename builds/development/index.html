@@ -1,13 +1,22 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
   <meta charset="UTF-8">
   <title>day #</title>
   <link rel="stylesheet" href="css/myStyle.css">
   <link rel="stylesheet" href="css/anotherstyle.css">
 </head>
-<body>
+<body ng-controller="myController as myCtrl">
+<p>input first</p>
+<input type="text" ng-model="myCtrl.test1"/>
+<p>input second</p>
+<input type="text" ng-model="myCtrl.test2"/>
 
+<p>press this button <button ng-click="myCtrl.intersect(myCtrl.test1, myCtrl.test2)">generate result</button>and this is the out put</p>
+<hr/>
+<span>{{myCtrl.result}}</span>
+<script src="js/lib/angular/angular.min.js"></script>
+<script src="js/app.js"></script>
 <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
 </body>
 </html>
